@@ -12,9 +12,18 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)"
       },
+      keyframes:{
+        active: {
+          '0%': { width: '10rem', height: '3px' },
+          '100%': { width: '15rem', height: '6px' },
+        }
+      },
+      animation:{
+        active: "active 1s ease-in"
+      }
   
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
 export default config;
